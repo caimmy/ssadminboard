@@ -8,6 +8,7 @@ Ext.define('Admin.view.authentication.AuthenticationModel', {
         password : '',
         email    : '',
         persist: false,
-        agrees : false
+        agrees : false,
+        appname: '烽火'
     }
 });

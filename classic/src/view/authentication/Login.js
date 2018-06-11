@@ -10,7 +10,7 @@ Ext.define('Admin.view.authentication.Login', {
         'Ext.button.Button'
     ],
 
-    title: 'Let\'s Log In',
+    title: '登陆烽火！',
     defaultFocus: 'authdialog', // Focus the Auth Form to force field focus as well
 
     items: [
@@ -102,17 +102,6 @@ Ext.define('Admin.view.authentication.Login', {
                     xtype: 'box',
                     html: '<div class="outer-div"><div class="seperator">OR</div></div>',
                     margin: '10 0'
-                },
-                {
-                    xtype: 'button',
-                    scale: 'large',
-                    ui: 'facebook',
-                    iconAlign: 'right',
-                    iconCls: 'x-fa fa-facebook',
-                    text: 'Login with Facebook',
-                    listeners: {
-                        click: 'onFaceBookLogin'
-                    }
                 },
                 {
                     xtype: 'box',

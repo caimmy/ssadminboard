@@ -6,8 +6,13 @@ Ext.define('Admin.view.authentication.Login', {
         'Ext.field.Checkbox',
         'Ext.field.Password',
         'Ext.field.Text',
-        'Ext.layout.HBox'
+        'Ext.layout.HBox',
+        'Admin.view.authentication.LoginController'
     ],
+
+    controller: 'login',
+
+    title: "let's login",
 
     items: [{
         xtype: 'panel',
@@ -25,10 +30,12 @@ Ext.define('Admin.view.authentication.Login', {
             items: [{
                 xtype: 'textfield',
                 placeHolder: 'Email',
+                allowBlank: false,
                 ui: 'light'
             },{
                 xtype: 'passwordfield',
                 placeHolder: 'Password',
+                allowBlank: false,
                 ui: 'light'
             },{
                 layout: 'hbox',
@@ -42,12 +49,13 @@ Ext.define('Admin.view.authentication.Login', {
                 }]
             },{
                 xtype: 'button',
-                text: 'Login',
+                text: '登 录',
                 iconAlign: 'right',
                 iconCls: 'x-fa fa-angle-right',
                 ui: 'confirm',
-                handler: function(){
-                    window.location.href = "#dashboard";
+                formBind: true,
+                listeners: {
+                    tap: 'onLoginClick'
                 }
             },{
                 xtype: 'button',

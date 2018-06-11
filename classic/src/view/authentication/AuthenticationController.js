@@ -9,6 +9,8 @@ Ext.define('Admin.view.authentication.AuthenticationController', {
     },
 
     onLoginButton: function() {
+        this.getView().destroy();
+        Admin.getApplication().setMainView("Admin.view.main.Main");
         this.redirectTo('dashboard', true);
     },
 

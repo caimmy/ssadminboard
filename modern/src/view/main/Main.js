@@ -3,7 +3,8 @@ Ext.define('Admin.view.main.Main', {
     requires: [
         'Ext.Button',
         'Ext.list.Tree',
-        'Ext.navigation.View'
+        'Ext.navigation.View',
+        'Admin.view.talk.Talkpanel'
     ],
 
     controller: 'main',

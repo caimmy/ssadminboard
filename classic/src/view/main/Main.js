@@ -1,9 +1,10 @@
 Ext.define('Admin.view.main.Main', {
     extend: 'Ext.container.Viewport',
-
+    xtype: 'app-main',
     requires: [
         'Ext.button.Segmented',
-        'Ext.list.Tree'
+        'Ext.list.Tree',
+        'Admin.view.talk.Talkpanel'
     ],
 
     controller: 'main',

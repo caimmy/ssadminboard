@@ -1,3 +1,6 @@
 ./cordova/platforms/android/app/build/outputs
 .sencha
 .vscode
+*.log
+${ext.dir}
+build/temp

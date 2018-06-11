@@ -8,9 +8,9 @@ Ext.define('Admin.Application', {
     
     name: 'Admin',
 
-    defaultToken : 'dashboard',
+    defaultToken : 'index',
 
-    mainView: 'Admin.view.main.Main',
+    mainView: 'Admin.view.main.Bone',
 
     profiles: [
         'Phone',

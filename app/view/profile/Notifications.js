@@ -6,6 +6,10 @@ Ext.define('Admin.view.profile.Notifications', {
 
     scrollable: false,
 
+    config: {
+        scrollable: true
+    },
+
     bind: {
         store: '{userSharedItems}'
     },

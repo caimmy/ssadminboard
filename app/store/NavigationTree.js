@@ -19,12 +19,21 @@ Ext.define('Admin.store.NavigationTree', {
                 leaf: true
             },
             {
+                text: 'Talkpanel',
+                iconCls: 'x-fa fa-send',
+                rowCls: 'nav-tree-badge nav-tree-badge-hot',
+                viewType: 'talkpanel',
+                leaf: true
+            },
+            /*
+            {
                 text: 'Email',
                 iconCls: 'x-fa fa-send',
                 rowCls: 'nav-tree-badge nav-tree-badge-hot',
                 viewType: 'email',
                 leaf: true
             },
+            */
             {
                 text: 'Profile',
                 iconCls: 'x-fa fa-user',
