@@ -22,6 +22,11 @@
     background-color: #e3495a;
 }
 
+.nav-tree-badge-important:after {
+    content: "重要";
+    background-color: #e3495a;
+}
+
 .nav-tree-badge-new:after {
     content: "NEW";
     background-color: $color-soft-blue;

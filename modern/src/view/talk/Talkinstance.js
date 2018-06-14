@@ -17,6 +17,6 @@ Ext.define('Admin.view.talk.Talkinstance', {
             xtype: 'talkshare',
             // Always 100% of container
             userCls: 'big-100 small-100 shadow'
-        },
+        }
     ]
 })

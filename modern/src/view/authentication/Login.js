@@ -12,14 +12,14 @@ Ext.define('Admin.view.authentication.Login', {
 
     controller: 'login',
 
-    title: "let's login",
+    title: "登陆烽火",
 
     items: [{
         xtype: 'panel',
 
         items: [{
             padding: '20 0 0 20',
-            html: 'Sign into your account'
+            html: '请签入账号'
         },{
             xtype: 'container',
             padding: 20,
@@ -29,12 +29,12 @@ Ext.define('Admin.view.authentication.Login', {
             layout: 'vbox',
             items: [{
                 xtype: 'textfield',
-                placeHolder: 'Email',
+                placeHolder: '手机号码',
                 allowBlank: false,
                 ui: 'light'
             },{
                 xtype: 'passwordfield',
-                placeHolder: 'Password',
+                placeHolder: '密码',
                 allowBlank: false,
                 ui: 'light'
             },{
@@ -59,16 +59,7 @@ Ext.define('Admin.view.authentication.Login', {
                 }
             },{
                 xtype: 'button',
-                text: 'Login with Facebook',
-                iconAlign: 'right',
-                iconCls: 'x-fa fa-facebook',
-                ui: 'facebook',
-                handler: function(){
-                    window.location.href = "#dashboard";
-                }
-            },{
-                xtype: 'button',
-                text: 'Create Account',
+                text: '申请新账号',
                 ui: 'gray-button',
                 iconAlign: 'right',
                 iconCls: 'x-fa fa-user-plus',

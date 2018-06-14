@@ -4,3 +4,4 @@
 *.log
 ${ext.dir}
 build/temp
+cordova
