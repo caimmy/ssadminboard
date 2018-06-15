@@ -14,6 +14,10 @@ Ext.define('Admin.view.authentication.Login', {
 
     title: "登陆烽火",
 
+    listeners: {
+        initialize: "onInitialize"
+    },
+
     items: [{
         xtype: 'panel',
 
@@ -29,11 +33,13 @@ Ext.define('Admin.view.authentication.Login', {
             layout: 'vbox',
             items: [{
                 xtype: 'textfield',
+                reference: 'ref_phone',
                 placeHolder: '手机号码',
                 allowBlank: false,
                 ui: 'light'
             },{
                 xtype: 'passwordfield',
+                reference: 'ref_passwd',
                 placeHolder: '密码',
                 allowBlank: false,
                 ui: 'light'

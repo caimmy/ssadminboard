@@ -16,7 +16,7 @@ Ext.define('Admin.view.talk.Talkshare', {
     items: [
         {
             xtype: 'textareafield',
-            placeHolder: "您的解答?"
+            placeHolder: "输入您的解答?"
         },
         {
             xtype: 'toolbar',
