@@ -8,8 +8,11 @@ Ext.define('Admin.view.talk.Dialogwnd', {
         type: 'talkmodel'
     },
 
+    controller: 'dialogwndcontroller',
+
     items: [{
         xtype: 'dialoghistory',
+        reference: 'ref_dialoghistory',
         bind: {
             store: '{messages}'
         }

@@ -1,7 +1,7 @@
 Ext.define("Admin.model.talk.Messages", {
     extend: 'Ext.data.Model',
     fields: [
-        {name: '_id', type: 'int'},
+        {name: '_id', type: 'string'},
         {name: 'sender', type: 'string'},
         {name: 'side', type: 'int'},
         {name: 'content', type: 'string'},

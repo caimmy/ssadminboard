@@ -5,8 +5,13 @@ Ext.define('Admin.view.talk.Talkpanel', {
     requires: [
         'Admin.view.talk.Dialogwnd'
     ],
-    
 
+    controller: 'talkpanelcontroller',
+
+    listeners: {
+        initialize: 'initialize',
+    },
+    
     //margin: '20 0 0 20',
     items: [{
         xtype: 'panel',
@@ -14,6 +19,7 @@ Ext.define('Admin.view.talk.Talkpanel', {
         html: '<h3>Oop~</h3>'
     }, {
         title: '激动的玩家',
+        itemId: '19981293007',
         xtype: 'dialogwnd',
     }]
 })

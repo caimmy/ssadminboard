@@ -35,12 +35,14 @@ Ext.define('Admin.view.authentication.Login', {
                 xtype: 'textfield',
                 reference: 'ref_phone',
                 placeHolder: '手机号码',
+                value: '15902811426',
                 allowBlank: false,
                 ui: 'light'
             },{
                 xtype: 'passwordfield',
                 reference: 'ref_passwd',
                 placeHolder: '密码',
+                value: 'abcd',
                 allowBlank: false,
                 ui: 'light'
             },{

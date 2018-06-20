@@ -3,5 +3,7 @@
 .vscode
 *.log
 ${ext.dir}
-build/temp
+build/temp/*
 cordova
+.idea
+cordova/platforms

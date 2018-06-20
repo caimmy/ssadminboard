@@ -4,8 +4,6 @@ Ext.define('Admin.view.authentication.LoginController', {
 
     onInitialize: function(self, eOpts) {
         var refs = this.getReferences();
-        refs.ref_phone.setValue('');
-        refs.ref_passwd.setValue('');
     },
 
     onLoginClick: function() {
@@ -17,7 +15,7 @@ Ext.define('Admin.view.authentication.LoginController', {
         } else {
             var me = this;
             Ext.data.JsonP.request({
-                url: 'http://10.128.27.90:8888/admin/login',
+                url: GetApiAddress('admin/login'),
                 params: {
                     'phone': login_phone,
                     'pass': login_pwd
@@ -25,6 +23,7 @@ Ext.define('Admin.view.authentication.LoginController', {
                 callbackKey: 'callback',
                 success: function(result) {
                     if (result.success) {
+                        Ext.apply(Admin.getApplication(), {userAccount: login_phone});
                         var bone = Ext.getCmp("bone_container");
                         bone.removeAll(true, true);
                         bone.add(Ext.create('Admin.view.main.Main'));

@@ -9,6 +9,11 @@ Ext.define('Admin.view.authentication.AuthenticationController', {
     },
 
     onLoginButton: function() {
+        Ext.Ajax.request({
+            url: '',
+            method: 'POST',
+            
+        })
         this.getView().destroy();
         Admin.getApplication().setMainView("Admin.view.main.Main");
         this.redirectTo('dashboard', true);

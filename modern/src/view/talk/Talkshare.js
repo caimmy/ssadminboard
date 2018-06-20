@@ -12,10 +12,12 @@ Ext.define('Admin.view.talk.Talkshare', {
     layout: 'fit',
 
     cls: 'share-panel',
+    controller: 'talksharecontroller',
 
     items: [
         {
             xtype: 'textareafield',
+            reference: 'response',
             placeHolder: "输入您的解答?"
         },
         {
@@ -37,7 +39,10 @@ Ext.define('Admin.view.talk.Talkshare', {
                 '->',
                 {
                     text: '回复',
-                    ui: 'soft-blue'
+                    ui: 'soft-blue',
+                    listeners: {
+                        tap: 'onSharebtn'
+                    }
                 }
             ]
         }
