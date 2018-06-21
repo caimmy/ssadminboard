@@ -19,5 +19,11 @@ Ext.define('Admin.Application', {
 
     stores: [
         'NavigationTree'
-    ]
+    ],
+
+    server_host: 'http://10.128.27.90:8888/',
+
+    GetApiAddress: function(api) {
+        return this.server_host + api;
+    }
 });

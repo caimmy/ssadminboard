@@ -3,13 +3,12 @@ Ext.define('Admin.view.talk.DialogwndController', {
     alias: 'controller.dialogwndcontroller',
 
     sendMessage: function(recver, content) {
-        var me = this;
         var sender_from = Admin.getApplication().userAccount;
         console.log("send message");
         console.log("recver: " + recver + " \ncontent: " + content);
-        var refs = me.getReferences();
+        var refs = this.getReferences();
         Ext.data.JsonP.request({
-            url: GetApiAddress("im/p2p"),
+            url: Admin.getApplication().GetApiAddress("im/p2p"),
             callbackKey: "callback",
             params: {
                 "from": sender_from,
@@ -30,5 +29,9 @@ Ext.define('Admin.view.talk.DialogwndController', {
                 Ext.Msg.alert("error", reason);
             }
         })
+    }, 
+
+    onInitialize: function(self, eOpts) {
+        console.log("dialogwnd on initialized");
     }
 })

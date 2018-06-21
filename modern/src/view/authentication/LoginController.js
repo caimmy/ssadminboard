@@ -15,7 +15,7 @@ Ext.define('Admin.view.authentication.LoginController', {
         } else {
             var me = this;
             Ext.data.JsonP.request({
-                url: GetApiAddress('admin/login'),
+                url: Admin.getApplication().GetApiAddress('admin/login'),
                 params: {
                     'phone': login_phone,
                     'pass': login_pwd

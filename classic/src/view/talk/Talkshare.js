@@ -2,36 +2,50 @@ Ext.define('Admin.view.talk.Talkshare', {
     extend: 'Ext.panel.Panel',
     xtype: 'talkshare',
 
-    bodyPadding : 10,
+    requires: [
+        'Ext.Button',
+        'Ext.form.field.TextArea',
+        'Ext.Toolbar'
+    ],
+
+    padding: 10,
     layout: 'fit',
 
     cls: 'share-panel',
-    
+    controller: 'talksharecontroller',
+
     items: [
         {
             xtype: 'textareafield',
-            emptyText: "请输入您的回答"
-        }
-    ],
-    
-    bbar: {
-        defaults : {
-                margin:'0 10 5 0'
+            reference: 'response',
+            placeHolder: "输入您的解答?"
         },
-        items:[
-            {
-                ui: 'header',
-                iconCls: 'x-fa fa-image'
+        {
+            xtype: 'toolbar',
+            docked: 'bottom',
+            defaults : {
+                margin:'0 10 5 0'
             },
-            {
-                ui: 'header',
-                iconCls: 'x-fa fa-file'
-            },
-            '->',
-            {
-                text: '回答',
-                ui: 'soft-blue'
-            }
-        ]
-    }
+
+            items: [
+                {
+                    iconCls: 'x-fa fa-camera',
+                    ui: 'header'
+                },
+                {
+                    iconCls: 'x-fa fa-file',
+                    ui: 'header'
+                },
+                '->',
+                {
+                    text: '回复',
+                    xtype: 'button',
+                    ui: 'soft-blue',
+                    listeners: {
+                        tap: 'onSharebtn'
+                    }
+                }
+            ]
+        }
+    ]
 })

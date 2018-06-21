@@ -6,6 +6,14 @@ Ext.define('Admin.view.talk.TalkshareController', {
         var refs = this.getReferences();
         var dialogwnd = this.getView().up('dialogwnd');
         var response = refs.response;
-        dialogwnd.getController().sendMessage(dialogwnd.getItemId(), response.getValue());
+        var reg_remote_act = /act-(.*)/;
+        var act = reg_remote_act.exec(dialogwnd.getItemId());
+        console.log(act);
+        if (act != null) {
+            dialogwnd.getController().sendMessage(act[1], response.getValue());
+        } else {
+            Ext.Msg.alert('error', 'remote account not found!');
+        }
+        
     }
 })

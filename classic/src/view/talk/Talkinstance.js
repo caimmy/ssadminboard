@@ -5,11 +5,8 @@ Ext.define('Admin.view.talk.Talkinstance', {
     cls: 'userProfile-container',
 
     requires: [
-        'Ext.ux.layout.ResponsiveColumn',
         'Admin.view.talk.Talkshare'
     ],
-
-    layout: 'responsivecolumn',
 
     items: [
         {
@@ -20,6 +17,6 @@ Ext.define('Admin.view.talk.Talkinstance', {
             xtype: 'talkshare',
             // Always 100% of container
             userCls: 'big-100 small-100 shadow'
-        },
+        }
     ]
 })

@@ -8,10 +8,6 @@ Ext.define('Admin.view.talk.Dialogwnd', {
         type: 'talkmodel'
     },
 
-    config: {
-        account: ''
-    },
-
     controller: 'dialogwndcontroller',
 
     items: [{

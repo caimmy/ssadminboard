@@ -18,25 +18,40 @@ Ext.define('Admin.view.talk.TalkpanelController', {
             var _content = P2PMsg.getPayload();
             var _side = 1;
             var _time = '';//timestamp2str(P2PMsg.getTimeStamp());
-            console.log("sender is :" + _from);
-            var sub_component = self.getComponent(_from);
-            if (sub_component) {
-                sub_component.down('dialoghistory').getStore().add({
-                    _id: _id,
-                    sender: _from,
-                    side: _side,
-                    content: _content,
-                    catalog: '',
-                    time: _time
-                });
-                console.log(sub_component.down('dialoghistory').getStore().getData());
-            } else {
-                console.log('not found');
-                self.add({
-                    title: '新的玩家',
-                    itemId: _from,
-                    xtype: 'dialogwnd',
-                })
+            var _find_item_id = "act-" + _from;
+            if (userAccount != _from) {
+                var sub_component = self.getComponent(_find_item_id);
+                if (sub_component) {
+                    sub_component.down('dialoghistory').getStore().add({
+                        _id: _id,
+                        sender: _from,
+                        side: _side,
+                        content: _content,
+                        catalog: '',
+                        time: _time
+                    });
+                } else {
+                    console.log('not found');
+                    console.log(_find_item_id);
+                    console.log(_content);
+                    
+                    self.add({
+                        title: _from,
+                        itemId: _find_item_id,
+                        xtype: 'dialogwnd',
+                    });
+                    var new_dialog = self.getComponent(_find_item_id);
+                    var history_panel = new_dialog.down('dialoghistory');
+                    history_panel.setStore(Ext.create('Admin.store.talk.Messages', {}));
+                    history_panel.getStore().add({
+                        _id: _id,
+                        sender: _from,
+                        side: _side,
+                        content: _content,
+                        catalog: '',
+                        time: _time
+                    })
+                }
             }
         });
 

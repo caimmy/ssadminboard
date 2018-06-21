@@ -3,7 +3,7 @@ Ext.define('Admin.store.talk.Messages', {
     alias: 'store.messages',
 
     model: 'Admin.model.talk.Messages',
-
+    autoload: true,
     data: [
         /*
         {_id: "1", sender: 'caimmy', side: 0, content: 'Oop~', catalog: 'text1', time: '2018-06-13 15:12:10'},

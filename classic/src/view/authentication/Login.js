@@ -43,6 +43,7 @@ Ext.define('Admin.view.authentication.Login', {
                     bind: '{userid}',
                     height: 55,
                     hideLabel: true,
+                    reference: 'userid',
                     allowBlank : false,
                     emptyText: 'user id',
                     triggers: {
@@ -58,6 +59,7 @@ Ext.define('Admin.view.authentication.Login', {
                     hideLabel: true,
                     emptyText: 'Password',
                     inputType: 'password',
+                    reference: 'password',
                     name: 'password',
                     bind: '{password}',
                     allowBlank : false,

@@ -3,16 +3,23 @@ Ext.define('Admin.view.talk.Talkpanel', {
     xtype: 'talkpanel',
 
     requires: [
-        'Admin.view.talk.Talkinstance',
+        'Admin.view.talk.Dialogwnd'
     ],
 
-    margin: '20 0 0 20',
+    controller: 'talkpanelcontroller',
+
+    listeners: {
+        initialize: 'initialize',
+    },
+    
+    //margin: '20 0 0 20',
     items: [{
-        title: '爱较真的玩家',
-        xtype: 'talkinstance'
-    }, {
-        title: '兴奋的玩家',
         xtype: 'panel',
+        title: '我的聊天',
         html: '<h3>Oop~</h3>'
+    }, {
+        title: '激动的玩家',
+        itemId: 'act-19981293007',
+        xtype: 'dialogwnd',
     }]
 })
